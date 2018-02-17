@@ -5,14 +5,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { LoginPage } from '../pages/login/login';
+import { AssetsPage } from '../pages/assets/assets';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
+  page: string;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -22,7 +25,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'List', component: ListPage },
+      { title: 'List', component: AssetsPage },
+
     ];
 
   }
@@ -41,4 +46,20 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+  Button1(){
+    this.nav.setRoot(HomePage);
+    }
+
+  /*checkPreviousAuthorization(): void{
+    if(window.localStorage.getItem('username') === "undefined" || window.localStorage.getItem('username') ===null &&
+       (window.localStorage.getItem('password') === "undefined" || window.localStorage.getItem('password') === null
+  )){
+    this.rootPage = LoginPage;
+
+
+  }else{
+    this.rootPage = HomePage;
+  }
+  }*/
 }

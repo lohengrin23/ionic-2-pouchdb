@@ -41,6 +41,16 @@ $colors: (
   dark:       #222
 );
 
+.menu-inner > ion-header, 
+.menu-inner > ion-content, 
+.menu-inner > ion-footer {
+    background-color: #123456; 
+}
+
+.toolbar-title {
+    color : #488aff;
+}
+
 
 // App iOS Variables
 // --------------------------------------------------

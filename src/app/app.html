@@ -1,15 +1,54 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <header>
+  <ion-navbar>
+    
+   
+  </ion-navbar>
+</header>
 
   <ion-content>
+      <div class="list card">
+
+          <div class="item item-avatar">
+            <img class="full-image" src="../assets/imgs/logo.png">
+            
+          </div>
+          
+          <div >
+             
+            
+              <span>Prolamsa</span>
+              <ion-buttons end>
+              
+              <button ion-button color="white" (click)="Button1()" >
+                
+              
+                  <ion-icon name="settings"></ion-icon>
+                  Settings
+                </button>
+              </ion-buttons>
+            </div>
+        
+          
+          
+        
+        
+        </div>
+        <br>
+        <ion-item (click)="openPage(p)" >Main</ion-item>
+        <br>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+     <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
-      </button>
+        <h2>side</h2>
+      </button>-->
+      
+     
+      
+      <ion-item   >About</ion-item>
+      <ion-item >Help</ion-item>
+     
+      <ion-item >Contact</ion-item>
     </ion-list>
   </ion-content>
 
